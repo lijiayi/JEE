@@ -4,6 +4,7 @@ JEE6 hello webservice project
 Key features:
 
 - JAX-WS webservice
+- Webservice is implemented as stateless session bean
 - Java client using the webservice
 
 The project consists of the following artifacts:
