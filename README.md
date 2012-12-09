@@ -1,4 +1,9 @@
-JEE6
-====
+JEE6 Examples
+=============
 
-JEE6 Examples.
+Contents:
+
+- hello-ejb : SLSB example project with client
+- hello-ws : Webservice example project with client
+
+EOF
