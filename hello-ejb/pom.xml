@@ -9,6 +9,13 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>hello-interface</module>
+        <module>hello-module</module>
+        <module>hello-client</module>
+        <module>hello-ear</module>
+    </modules>
+
     <description>A JEE6 EJB application with a client.</description>
     <name>JEE6 Hello EJB application</name>
 
@@ -21,12 +28,10 @@
         <url>http://spqr-info.de/</url>
     </organization>
 
-    <modules>
-        <module>hello-interface</module>
-        <module>hello-module</module>
-        <module>hello-client</module>
-        <module>hello-ear</module>
-    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javaee-api.version>6.0</javaee-api.version>
+    </properties>
 
     <build>
         <plugins>
