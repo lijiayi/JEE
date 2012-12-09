@@ -33,4 +33,10 @@ The client build process (see `pom.xml`) contains the `jaxws-maven-plugin` which
 
 The WSDL and XSD files must be added manually to the `src/wsdl` directory. These files are put into the Git repository but not the generated sources.
 
+Windows note
+============
+
+On Windows replace `/` with `\` and `:` with `;`.
+
+
 EOF
