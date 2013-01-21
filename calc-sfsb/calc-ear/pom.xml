@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.spqr-info.jee.calc-sfsb</groupId>
+        <artifactId>calc-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <packaging>ear</packaging>
+
+    <artifactId>calc-ear</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.spqr-info.jee.calc-sfsb</groupId>
+            <artifactId>calc-module</artifactId>
+            <!-- Important: Set the type of the depedency to ejb, otherwise
+                 the maven-ear-plugin will complaint that the module is not
+                 present in the project. This must be specified for ejb
+                 modules and wars. -->
+            <type>ejb</type>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>calc</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+                    <version>6</version>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
