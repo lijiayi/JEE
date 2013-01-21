@@ -3,7 +3,8 @@ JEE6 Examples
 
 Contents:
 
-- hello-ejb : SLSB example project with client
+- hello-slsb : Stateless session bean example with command line client
+- hello-sfsb : Stateful session bean example with command line client
 - hello-ws : Webservice example project with client
 
 EOF
