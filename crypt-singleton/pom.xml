@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.spqr-info.jee.crypt-singleton</groupId>
+    <artifactId>crypt-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>crypt-interface</module>
+        <module>crypt-module</module>
+        <module>crypt-client</module>
+        <module>crypt-ear</module>
+    </modules>
+
+    <description>A JEE6 singleton application with a client.</description>
+    <name>JEE6 singleton application</name>
+
+    <url>https://github.com/bwolf/JEE6</url>
+
+    <inceptionYear>2012</inceptionYear>
+
+    <organization>
+        <name>SPQR Informatik GmbH</name>
+        <url>http://spqr-info.de/</url>
+    </organization>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javaee-api.version>6.0</javaee-api.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>gf</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.glassfish</groupId>
+                        <artifactId>maven-embedded-glassfish-plugin</artifactId>
+                        <version>3.1</version>
+                        <configuration>
+                            <app>${project.basedir}/crypt-ear/target/crypt.ear</app>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>
