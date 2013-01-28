@@ -18,7 +18,7 @@
         The following table contains the job logs from two EJB timer beans:
     </p>
 
-    <h:dataTable rendered="#{indexBacking.haveJobLogs}"  value="#{indexBacking.jobLogs}" var="o">
+    <h:dataTable rendered="#{indexBacking.hasJobLogs}"  value="#{indexBacking.jobLogs}" var="o">
         <h:column>#{o.created}</h:column>
         <h:column>#{o.message}</h:column>
     </h:dataTable>
