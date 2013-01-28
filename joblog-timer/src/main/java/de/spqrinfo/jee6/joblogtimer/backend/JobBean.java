@@ -23,7 +23,7 @@ public class JobBean {
         this.jobLogBean.addLogMessage("someJob finished");
     }
 
-    @Schedule(minute = "*/1", hour = "*") // every five minutes
+    @Schedule(minute = "*/1", hour = "*") // every minute
     private void anotherJob() {
         // do some work
 
