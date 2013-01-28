@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Simple JSF Facelets page</title>
+</h:head>
+<h:body>
+    <h1>View EJB Timer Job logs</h1>
+
+    <p>There are two jobs:</p>
+    <ul>
+        <li>someJob: every 10s and Sundays at 00:17</li>
+        <li>anotherJob: every minute</li>
+    </ul>
+
+    <p>
+        The following table contains the job logs from two EJB timer beans:
+    </p>
+
+    <h:dataTable rendered="#{indexBacking.haveJobLogs}"  value="#{indexBacking.jobLogs}" var="o">
+        <h:column>#{o.created}</h:column>
+        <h:column>#{o.message}</h:column>
+    </h:dataTable>
+
+</h:body>
+</html>
