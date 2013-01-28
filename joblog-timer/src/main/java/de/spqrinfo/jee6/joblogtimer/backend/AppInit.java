@@ -15,5 +15,6 @@ public class AppInit {
     @PostConstruct
     private void init() {
         this.programmaticTimerBean.createTimeoutEverySeconds(12);
+        this.programmaticTimerBean.createTimeoutEverySeconds(3);
     }
 }
