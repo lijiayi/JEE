@@ -15,7 +15,7 @@ public class JobBean {
             @Schedule(second = "*/10", minute = "*", hour = "*"),    // every 10 seconds
             @Schedule(dayOfWeek = "Sun", hour = "0", minute = "17")  // another schedule
     })
-    private void someJob() {
+    public void someJob() { // public access to permit testing
         // do some work
 
         // log result
@@ -23,8 +23,8 @@ public class JobBean {
         this.jobLogBean.addLogMessage("someJob finished");
     }
 
-    @Schedule(minute = "*/1", hour = "*") // every five minutes
-    private void anotherJob() {
+    @Schedule(minute = "*/1", hour = "*") // every minute
+    public void anotherJob() { // public access to permit testing
         // do some work
 
         // log result

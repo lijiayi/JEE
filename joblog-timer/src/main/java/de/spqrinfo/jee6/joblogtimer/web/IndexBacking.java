@@ -13,11 +13,7 @@ public class IndexBacking {
     @EJB
     private JobLogBean jobLogBean;
 
-    public String getName() {
-        return "IndexBacking";
-    }
-
-    public boolean getHaveJobLogs() {
+    public boolean getHasJobLogs() {
         return this.jobLogBean.hasMessages();
     }
 
