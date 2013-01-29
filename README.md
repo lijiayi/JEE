@@ -8,5 +8,6 @@ Contents:
 - crypt-singleton: Singleton bean example with command line client
 - joblog-time: Timer EJB example with web client
 - hello-ws : Webservice example project with client
+- timing-interceptor: Interceptor demo for time measurements
 
 EOF
