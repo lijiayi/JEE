@@ -9,6 +9,12 @@
 <body>
     <h1>Fibonacci calculation</h1>
 
+    <p>
+        Debug information:
+        <br/>Servlet ID: ${servletId}
+        <br/>Model ID: ${fibonacci}
+    </p>
+
     <h2>Asynchronous Fibonacci calculation</h2>
     <form action="home.do" method="post">
         <div>

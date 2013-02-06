@@ -31,9 +31,12 @@ public class HomeController extends HttpServlet {
         if (null == fibonacci.getInputValue()) {
             fibonacci.setInputValue(DEFAULT_FIB_N);
         }
+
         if (null == fibonacci.getInputValueSynchronous()) {
             fibonacci.setInputValueSynchronous(DEFAULT_FIB_N);
         }
+
+        request.setAttribute("servletId", this.toString());
         request.setAttribute("fibonacci", fibonacci);
         request.getRequestDispatcher(VIEW).forward(request, response);
     }
@@ -41,28 +44,45 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doPost(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
         final String operation = request.getParameter("operation");
+
         if (null == operation) {
             throw new RuntimeException("Unknown operation; Parameter missing");
         } else if (operation.equals("calculate")) {
-            System.out.println("Calculation");
-            final String inputValueStr = request.getParameter("inputValue");
-            final BigInteger inputValue = new BigInteger(inputValueStr);
-            final Future<BigInteger> result = this.fibonacciCalculationBean.asyncFibonacci(inputValue);
-            this.fibonacci.setInputValue(inputValue);
-            this.fibonacci.setResult(result);
+            calculateAsynchronous(request);
         } else if (operation.equals("check")) {
             System.out.println("Check");
         } else if (operation.equals("calculateSynchronous")) {
-            System.out.println("Synchronous calculate");
-            final String inputValueStr = request.getParameter("inputValueSynchronous");
-            final BigInteger inputValue = new BigInteger(inputValueStr);
-            final BigInteger result = this.fibonacciCalculationBean.synchronousFibonacci(inputValue);
-            this.fibonacci.setInputValueSynchronous(inputValue);
-            this.fibonacci.setResultSynchronous(result);
+            calculateSynchronous(request);
         } else {
             throw new RuntimeException("Unknown operation '" + operation + "'");
         }
+
+        request.setAttribute("servletId", this.toString());
         request.setAttribute("fibonacci", fibonacci);
         request.getRequestDispatcher(VIEW).forward(request, response);
+    }
+
+    private void calculateAsynchronous(final HttpServletRequest request) throws ServletException, IOException {
+        System.out.println("Asynchronous calculate");
+
+        final String inputValueStr = request.getParameter("inputValue");
+        final BigInteger inputValue = new BigInteger(inputValueStr);
+
+        final Future<BigInteger> result = this.fibonacciCalculationBean.asyncFibonacci(inputValue);
+
+        this.fibonacci.setInputValue(inputValue);
+        this.fibonacci.setResult(result);
+    }
+
+    private void calculateSynchronous(final HttpServletRequest request) throws ServletException, IOException {
+        System.out.println("Synchronous calculate");
+
+        final String inputValueStr = request.getParameter("inputValueSynchronous");
+        final BigInteger inputValue = new BigInteger(inputValueStr);
+
+        final BigInteger result = this.fibonacciCalculationBean.synchronousFibonacci(inputValue);
+
+        this.fibonacci.setInputValueSynchronous(inputValue);
+        this.fibonacci.setResultSynchronous(result);
     }
 }

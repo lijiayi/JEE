@@ -1,11 +1,14 @@
 package de.spqrinfo.jee6.async.web;
 
-import javax.enterprise.context.SessionScoped;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.enterprise.context.RequestScoped;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.concurrent.Future;
 
-@SessionScoped
+@RequestScoped
+//@SessionScoped
 public class Fibonacci implements Serializable {
 
     private BigInteger inputValue;
@@ -13,6 +16,16 @@ public class Fibonacci implements Serializable {
 
     private BigInteger inputValueSynchronous;
     private BigInteger resultSynchronous;
+
+    @PostConstruct
+    public void init() {
+        System.out.println("@PostConstruct");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("@PreDestroy");
+    }
 
     public BigInteger getInputValue() {
         return inputValue;
@@ -58,13 +71,13 @@ public class Fibonacci implements Serializable {
         this.resultSynchronous = resultSynchronous;
     }
 
-    @Override
-    public String toString() {
-        return "Fibonacci{" +
-                "inputValue=" + inputValue +
-                ", result=" + result +
-                ", inputValueSynchronous=" + inputValueSynchronous +
-                ", resultSynchronous=" + resultSynchronous +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Fibonacci{" +
+//                "inputValue=" + inputValue +
+//                ", result=" + result +
+//                ", inputValueSynchronous=" + inputValueSynchronous +
+//                ", resultSynchronous=" + resultSynchronous +
+//                '}';
+//    }
 }
