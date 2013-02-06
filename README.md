@@ -3,11 +3,13 @@ JEE6 Examples
 
 Contents:
 
-- hello-slsb : Stateless session bean example with command line client
-- calc-sfsb : Stateful session bean example with command line client
-- crypt-singleton: Singleton bean example with command line client
-- joblog-time: Timer EJB example with web client
-- hello-ws : Webservice example project with client
-- timing-interceptor: Interceptor demo for time measurements
+- async-fib	Asynchronous fibonacci calculation (web)
+- calc-sfsb	SLSB (cli)
+- crypt-singleton	Sington bean (cli)
+- hello-slsb SLSB (cli)
+- hello-ws Webservices
+- joblog-timer JEE timers (web)
+- product-decorator	Decorators (web)
+- timing-interceptor Interceptors (web)
 
 EOF
