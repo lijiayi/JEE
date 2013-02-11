@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>JDBC Demo</title>
+</h:head>
+<h:body>
+    <h1>JDBC Demo</h1>
+
+    <p>Count of messages: <h:outputText value="#{indexBacking.countOfMessages}"/></p>
+
+    <h:form>
+        <!--<h:outputLabel for="newMessage" value="New message:"/>-->
+        <br/>
+        <!--id="newMessage"-->
+        <h:inputText value="#{indexBacking.messageText}"/>
+        <h:commandButton value="Add message" action="#{indexBacking.addMessage}"/>
+    </h:form>
+
+    <p>Recent messages:</p>
+    <ul>
+    <ui:repeat value="#{indexBacking.recentMessages}" var="m">
+        <li>#{m}</li>
+    </ui:repeat>
+    </ul>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('newMessage').focus()
+        }
+    </script>
+</h:body>
+</html>

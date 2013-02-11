@@ -11,5 +11,6 @@ Contents:
 - joblog-timer JEE timers (web)
 - product-decorator	Decorators (web)
 - timing-interceptor Interceptors (web)
+- jdbc-bean-tx JDBC with bean managed transactions (web)
 
 EOF
