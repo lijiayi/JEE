@@ -24,11 +24,13 @@ Running
 
 3. Create database `jee6`:
 
-    'CREATE TABLE `message` (
-      `id` bigint(20) NOT NULL AUTO_INCREMENT,
-      `msg` varchar(256) DEFAULT NULL,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB;
+<pre>
+'CREATE TABLE `message` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `msg` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+</pre>
 
 4. Package project via `mvn package`
 
