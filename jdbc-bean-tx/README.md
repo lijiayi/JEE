@@ -38,17 +38,23 @@ Running
 
 5. Start the Glassfish application server
 
-5. Navigate to the Glassfish server admin console via http://localhost:4848/
+5. Navigate to the Glassfish server admin console via [http://localhost:4848/](http://localhost:4848/)
 
 6. Open the JDBC/JDBC Connection Pools node and create a new Connection Pool named `MySqlPool`.
+
     1. For Resource type enter `javax.sql.DataSource`
+
     2. For the Database Driver Vendor select `MySql`
+
     3. Click Next
+
     4. Scroll to the bottom of the page and ensure the following properties are set as follows:
+
         * User: `root`
         * ServerName: `localhost`
         * DatabaseName: `jee6`
         * Password: `NEWPASSWORD`
+
     5. Click Save
 
 7. Again open the new Connection Pool `MySqlPool`, click advanced properties and delete the `url` property.
