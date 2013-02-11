@@ -18,19 +18,21 @@ Running
 
 2. Login to MySQL and set a root password (this is really required):
 
+    <pre>
     $ mysql -u root -p
     mysql> use mysql;
     user> update user set password=PASSWORD("NEWPASSWORD") where User='root';
+    </pre>
 
 3. Create database `jee6`:
 
-<pre>
-'CREATE TABLE `message` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `msg` varchar(256) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB;
-</pre>
+    <pre>
+    'CREATE TABLE `message` (
+      `id` bigint(20) NOT NULL AUTO_INCREMENT,
+      `msg` varchar(256) DEFAULT NULL,
+      PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB;
+    </pre>
 
 4. Package project via `mvn package`
 
@@ -39,15 +41,15 @@ Running
 5. Navigate to the Glassfish server admin console via http://localhost:4848/
 
 6. Open the JDBC/JDBC Connection Pools node and create a new Connection Pool named `MySqlPool`.
-    1. For Resource type enter `javax.sql.DataSource`
-    2. For the Database Driver Vendor select `MySql`
-    3. Click Next
-    4. Scroll to the bottom of the page and ensure the following properties are set as follows:
+    6.1. For Resource type enter `javax.sql.DataSource`
+    6.2. For the Database Driver Vendor select `MySql`
+    6.3. Click Next
+    6.4. Scroll to the bottom of the page and ensure the following properties are set as follows:
         * User: `root`
         * ServerName: `localhost`
         * DatabaseName: `jee6`
         * Password: `NEWPASSWORD`
-    5. Click Save
+    6.5. Click Save
 
 7. Again open the new Connection Pool `MySqlPool`, click advanced properties and delete the `url` property.
 
@@ -56,5 +58,6 @@ Running
 9. Deploy the application `target/jdbc-bean-tx.war`.
 
 10. Navigate to [http://localhost:8080/jdbc-bean-tx/](http://localhost:8080/jdbc-bean-tx/)
+
 
 EOF
