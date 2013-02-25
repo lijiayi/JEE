@@ -3,7 +3,8 @@ JEE CDI Servlet Project
 
 Key features:
 
-- Three counters with application, session and request scope
+- Three counters with application, session and request scope, injected with CDI
+- Two counters for application and request scope, contained in the servlet
 - Servlet acting as controller
 - JSP realizing the view
 - POJO to pass state between controller and view
