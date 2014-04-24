@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.async.backend;
+package de.spqrinfo.jee.async.backend;
 
 import javax.ejb.AsyncResult;
 import javax.ejb.Asynchronous;

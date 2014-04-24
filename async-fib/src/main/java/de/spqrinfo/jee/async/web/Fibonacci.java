@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.async.web;
+package de.spqrinfo.jee.async.web;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.async.backend;
+package de.spqrinfo.jee.async.backend;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -30,7 +30,7 @@ public class FibonacciCalculationBeanTest {
     public void testSynchronousFibonacci() throws Exception {
         final BigInteger expected = new BigInteger("2791715456571051233611642553");
         final BigInteger inputN = new BigInteger("133");
-        final BigInteger actual = fib.synchronousFibonacci(inputN);
+        final BigInteger actual = this.fib.synchronousFibonacci(inputN);
         Assert.assertEquals(expected, actual);
     }
 }

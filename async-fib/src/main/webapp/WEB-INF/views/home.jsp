@@ -1,4 +1,4 @@
-<%--@elvariable id="fibonacci" type="de.spqrinfo.jee6.async.web.Fibonacci"--%>
+<%--@elvariable id="fibonacci" type="de.spqrinfo.jee.async.web.Fibonacci"--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>

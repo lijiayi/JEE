@@ -1,6 +1,6 @@
-package de.spqrinfo.jee6.async.web;
+package de.spqrinfo.jee.async.web;
 
-import de.spqrinfo.jee6.async.backend.FibonacciCalculationBean;
+import de.spqrinfo.jee.async.backend.FibonacciCalculationBean;
 
 import javax.ejb.EJB;
 import javax.inject.Inject;
