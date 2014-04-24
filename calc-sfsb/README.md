@@ -1,5 +1,5 @@
-JEE6 calc SFSB project
-======================
+JEE calc SFSB project
+=====================
 
 Key features:
 
@@ -18,33 +18,41 @@ Running
 
 1) `mvn package`
 
-2) Deploy `calc-ear/target/calc.ear`
+2) Run the server part `calc-ear/target/calc.ear`:
+```shell
+    cd calc-ear
+    mvn embedded-glassfish:run
+```
 
 3) Run the CDI based client
-
+```shell
     $GLASSFISH_HOME/bin/appclient \
         -cp calc-client/target/calc-client.jar:calc-interface/target/calc-interface.jar \
-        de.spqrinfo.jee6.calc.client.MainCDI
+        de.spqrinfo.jee.calc.client.MainCDI
+```
 
-    # Resulting output
+    # Output displayed
+```
     USAGE:
     put n - stored n into the memory
     get   - retrieves stored value from memory
     add n - adds value n to value from memory and stores it
     rem   - calls @Remove method on SFSB
     q     - quits the client
-
+```
 
 4) Run the JNDI based client:
-
+```shell
     $GLASSFISH_HOME/bin/appclient \
         -cp calc-client/target/calc-client.jar:calc-interface/target/calc-interface.jar \
-        de.spqrinfo.jee6.calc.client.MainJNDI
+        de.spqrinfo.jee.calc.client.MainJNDI
 
-    # Resulting output
+    # Output displayed
+```
     Creating InitialContext
     JNDI lookup for 'java:global/calc/calc-module/CalcBean'
     ...
+```
 
 Windows note
 ============

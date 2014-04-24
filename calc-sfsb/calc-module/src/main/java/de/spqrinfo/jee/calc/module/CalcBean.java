@@ -1,6 +1,6 @@
-package de.spqrinfo.jee6.calc.module;
+package de.spqrinfo.jee.calc.module;
 
-import de.spqrinfo.jee6.calc.Calc;
+import de.spqrinfo.jee.calc.Calc;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

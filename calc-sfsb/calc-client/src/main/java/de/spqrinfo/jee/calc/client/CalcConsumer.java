@@ -1,13 +1,15 @@
-package de.spqrinfo.jee6.calc.client;
+package de.spqrinfo.jee.calc.client;
 
-import de.spqrinfo.jee6.calc.Calc;
+import de.spqrinfo.jee.calc.Calc;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.regex.Pattern;
 
 public class CalcConsumer {
 
+    private static final Pattern PATTERN = Pattern.compile("\\s+");
     private final Calc calc;
 
     private final BufferedReader reader;
@@ -26,7 +28,7 @@ public class CalcConsumer {
         String line;
         while (null != (line = this.reader.readLine())) {
             line = line.trim();
-            final String[] tokens = line.split("\\s+");
+            final String[] tokens = PATTERN.split(line);
             if (null == tokens || 0 == tokens.length) {
                 showHelp();
             } else {
@@ -50,7 +52,7 @@ public class CalcConsumer {
     }
 
     private void doGet() {
-        int n = this.calc.get();
+        final int n = this.calc.get();
         System.out.println("-> " + n);  //To change body of catch statement use File | Settings | File Templates.
     }
 
@@ -58,7 +60,7 @@ public class CalcConsumer {
         try {
             final int n = Integer.parseInt(tokens[1]);
             this.calc.put(n);
-        } catch (NumberFormatException e) {
+        } catch (final NumberFormatException e) {
             e.printStackTrace();
         }
     }
@@ -67,7 +69,7 @@ public class CalcConsumer {
         try {
             final int n = Integer.parseInt(tokens[1]);
             this.calc.add(n);
-        } catch (NumberFormatException e) {
+        } catch (final NumberFormatException e) {
             e.printStackTrace();
         }
     }

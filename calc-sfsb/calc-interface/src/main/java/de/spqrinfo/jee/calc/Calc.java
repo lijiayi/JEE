@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.calc;
+package de.spqrinfo.jee.calc;
 
 public interface Calc {
 
