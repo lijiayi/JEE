@@ -58,7 +58,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>de.spqrinfo.jee6.hello.client.Main</mainClass>
+                            <mainClass>de.spqrinfo.jee.hello.client.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -83,6 +83,7 @@
                         </configuration>
                     </execution>
                 </executions>
+
                 <dependencies>
                     <dependency>
                         <groupId>javax.xml</groupId>
@@ -90,12 +91,14 @@
                         <version>1.4</version>
                     </dependency>
                 </dependencies>
+
                 <configuration>
                     <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
                     <xnocompile>true</xnocompile>
                     <verbose>true</verbose>
                     <extension>true</extension>
                     <catalog>${basedir}/src/jax-ws-catalog.xml</catalog>
+                    <sei/>
                 </configuration>
             </plugin>
         </plugins>

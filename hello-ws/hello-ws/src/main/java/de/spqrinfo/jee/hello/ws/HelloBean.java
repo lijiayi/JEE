@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.hello.ws;
+package de.spqrinfo.jee.hello.ws;
 
 import javax.ejb.Stateless;
 import javax.jws.WebMethod;
@@ -12,7 +12,7 @@ import javax.jws.WebService;
 public class HelloBean {
 
     @WebMethod(operationName = "hello")
-    public String getHello(@WebParam(name = "userName") String name) {
+    public String getHello(@WebParam(name = "userName") final String name) {
         return "Hello, " + name + "!";
     }
 }

@@ -14,10 +14,10 @@
         <module>hello-ws-client</module>
     </modules>
 
-    <description>A JEE6 Web Service Hello application which is a EJB with a JSE client.</description>
-    <name>JEE6 WS Hello is a EJB JSE</name>
+    <description>A JEE Web Service Hello application which is a EJB with a JSE client.</description>
+    <name>JEE WS Hello is a EJB JSE</name>
 
-    <url>http://github.com/bwolf/JEE6/</url>
+    <url>http://github.com/bwolf/JEE/</url>
 
     <inceptionYear>2012</inceptionYear>
 
@@ -28,7 +28,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javaee-api.version>6.0</javaee-api.version>
+        <javaee-api.version>7.0</javaee-api.version>
     </properties>
 
     <build>

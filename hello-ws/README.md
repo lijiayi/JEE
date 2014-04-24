@@ -1,30 +1,36 @@
-JEE6 hello webservice project
-=============================
+JEE hello webservice project
+============================
 
 Key features:
-
 - JAX-WS webservice
 - Webservice is implemented as stateless session bean
 - Java client using the webservice
 
 The project consists of the following artifacts:
-
 - hello-ws: Hello webservice web project
 - hello-ws-client: Hello webservice client project
 
 Running
 =======
 
-1) `mvn package`
+1. Run the server part `hello-ws/target/hello-ws.war`:
+```shell
+mvn package
+cd hello-ws
+mvn embedded-glassfish:run
+```
 
-2) Deploy `hello-ws/target/hello-ws.war` in application server
+3. Run the client
+```shell
+cd $PROJECT_ROOT/hello-ws-client
+mvn package
+java -jar target/hello-ws-client.jar YourName
+```
 
-3) Run the client
-
-    java -jar hello-ws-client/target/hello-ws-client.jar YourName
-    
-    # Resulting output
-    result Hello, YourName!
+Output displayed
+```
+result Hello, YourName!
+```
 
 Client development notes
 ========================
