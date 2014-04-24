@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.cdiservlet.beans;
+package de.spqrinfo.jee.cdiservlet.beans;
 
 import javax.enterprise.context.RequestScoped;
 import java.util.concurrent.atomic.AtomicInteger;

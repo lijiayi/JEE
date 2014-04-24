@@ -1,10 +1,11 @@
-package de.spqrinfo.jee6.cdiservlet.beans;
+package de.spqrinfo.jee.cdiservlet.beans;
 
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@ApplicationScoped
-public class ApplicationCounter {
+@SessionScoped
+public class SessionCounter implements Serializable {
 
     private final AtomicInteger counter = new AtomicInteger();
 

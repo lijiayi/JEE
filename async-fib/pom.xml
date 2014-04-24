@@ -9,10 +9,10 @@
 
     <packaging>war</packaging>
 
-    <description>A JEE7 async SLSB web application to calculate fibonacci numbers.</description>
-    <name>JEE7 async SLSB web application</name>
+    <description>A JEE async SLSB web application to calculate fibonacci numbers.</description>
+    <name>JEE async SLSB web application</name>
 
-    <url>https://github.com/bwolf/JEE6</url>
+    <url>https://github.com/bwolf/JEE7</url>
 
     <inceptionYear>2012</inceptionYear>
 

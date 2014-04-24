@@ -16,10 +16,10 @@
         <module>calc-ear</module>
     </modules>
 
-    <description>A JEE7 SFSB EJB application with a client.</description>
-    <name>JEE7 SFSB EJB application</name>
+    <description>A JEE SFSB EJB application with a client.</description>
+    <name>JEE SFSB EJB application</name>
 
-    <url>https://github.com/bwolf/JEE6</url>
+    <url>https://github.com/bwolf/JEE7</url>
 
     <inceptionYear>2012</inceptionYear>
 

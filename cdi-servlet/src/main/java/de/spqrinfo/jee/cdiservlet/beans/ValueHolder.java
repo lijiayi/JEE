@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.cdiservlet.beans;
+package de.spqrinfo.jee.cdiservlet.beans;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
@@ -14,7 +14,7 @@ public class ValueHolder {
     private int servletRequestScopedCount;
 
     public int getCdiApplicationScopedCount() {
-        return cdiApplicationScopedCount;
+        return this.cdiApplicationScopedCount;
     }
 
     public void setCdiApplicationScopedCount(final int cdiApplicationScopedCount) {
@@ -22,7 +22,7 @@ public class ValueHolder {
     }
 
     public int getCdiSessionScopedCount() {
-        return cdiSessionScopedCount;
+        return this.cdiSessionScopedCount;
     }
 
     public void setCdiSessionScopedCount(final int cdiSessionScopedCount) {
@@ -30,7 +30,7 @@ public class ValueHolder {
     }
 
     public int getCdiRequestScopedCount() {
-        return cdiRequestScopedCount;
+        return this.cdiRequestScopedCount;
     }
 
     public void setCdiRequestScopedCount(final int cdiRequestScopedCount) {
@@ -38,7 +38,7 @@ public class ValueHolder {
     }
 
     public int getServletApplicationScopedCount() {
-        return servletApplicationScopedCount;
+        return this.servletApplicationScopedCount;
     }
 
     public void setServletApplicationScopedCount(final int servletApplicationScopedCount) {
@@ -46,7 +46,7 @@ public class ValueHolder {
     }
 
     public int getServletRequestScopedCount() {
-        return servletRequestScopedCount;
+        return this.servletRequestScopedCount;
     }
 
     public void setServletRequestScopedCount(final int servletRequestScopedCount) {
@@ -56,11 +56,11 @@ public class ValueHolder {
     @Override
     public String toString() {
         return "ValueHolder{" +
-                "cdiApplicationScopedCount=" + cdiApplicationScopedCount +
-                ", cdiSessionScopedCount=" + cdiSessionScopedCount +
-                ", cdiRequestScopedCount=" + cdiRequestScopedCount +
-                ", servletApplicationScopedCount=" + servletApplicationScopedCount +
-                ", servletRequestScopedCount=" + servletRequestScopedCount +
+                "cdiApplicationScopedCount=" + this.cdiApplicationScopedCount +
+                ", cdiSessionScopedCount=" + this.cdiSessionScopedCount +
+                ", cdiRequestScopedCount=" + this.cdiRequestScopedCount +
+                ", servletApplicationScopedCount=" + this.servletApplicationScopedCount +
+                ", servletRequestScopedCount=" + this.servletRequestScopedCount +
                 '}';
     }
 }

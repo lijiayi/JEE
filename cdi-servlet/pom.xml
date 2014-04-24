@@ -12,7 +12,7 @@
     <description>A JEE servlet application to demonstrate CDI scopes.</description>
     <name>JEE servlet CDI application</name>
 
-    <url>https://github.com/bwolf/JEE6</url>
+    <url>https://github.com/bwolf/JEE7</url>
 
     <inceptionYear>2012</inceptionYear>
 
@@ -23,7 +23,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javaee-api.version>6.0</javaee-api.version>
+        <javaee-api.version>7.0</javaee-api.version>
     </properties>
 
     <dependencies>
@@ -37,7 +37,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.1</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -56,14 +56,15 @@
             </plugin>
 
             <plugin>
-                <groupId>org.glassfish</groupId>
+                <groupId>org.glassfish.embedded</groupId>
                 <artifactId>maven-embedded-glassfish-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.1.2.2</version>
                 <configuration>
                     <app>${project.build.directory}/${project.build.finalName}.war</app>
                     <ports>
                         <http-listener>8080</http-listener>
                     </ports>
+                    <contextRoot>${project.artifactId}</contextRoot>
                 </configuration>
             </plugin>
         </plugins>
