@@ -20,7 +20,7 @@ Running
 
 2) Run in embedded glassfish container: `mvn embedded-glassfish:run`
 
-3) Navigate to <a href="http://localhost:8080/myapp/">http://localhost:8080/myapp/</a>
+3) Navigate to <a href="http://localhost:8080/cdi-servlet/">http://localhost:8080/cdi-servlet/</a>
 
 4) Perform several reloads of the web page.
 
