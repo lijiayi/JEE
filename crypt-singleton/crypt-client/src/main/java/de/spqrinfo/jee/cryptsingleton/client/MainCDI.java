@@ -1,28 +1,30 @@
-package de.spqrinfo.jee6.cryptsingleton.client;
+package de.spqrinfo.jee.cryptsingleton.client;
 
-import de.spqrinfo.jee6.cryptsingleton.Crypt;
+import de.spqrinfo.jee.cryptsingleton.Crypt;
 
 import javax.ejb.EJB;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.regex.Pattern;
 
 import static java.lang.System.err;
 import static java.lang.System.out;
 
 public class MainCDI {
 
+    private static final Pattern PATTERN = Pattern.compile("\\s+");
     @EJB
     private static Crypt crypt;
 
     private static String register = "";
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         while (true) {
             try {
                 if (repl()) {
                     break;
                 }
-            } catch (Exception e) {
+            } catch (final Exception e) {
                 e.printStackTrace();
             }
         }
@@ -37,7 +39,7 @@ public class MainCDI {
             if (line.isEmpty()) {
                 continue;
             }
-            final String[] tokens = line.split("\\s+");
+            final String[] tokens = PATTERN.split(line);
             if (null == tokens || 0 == tokens.length) {
                 showUsage();
             } else if (tokens[0].equals("encrypt")) {

@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.cryptsingleton.module;
+package de.spqrinfo.jee.cryptsingleton.module;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -10,7 +10,7 @@ public class CryptBeanTest {
 
     @Before
     public void before() {
-        KeyBean keyBean = new KeyBean();
+        final KeyBean keyBean = new KeyBean();
         keyBean.init();
 
         this.cryptBean = new CryptBean(keyBean);

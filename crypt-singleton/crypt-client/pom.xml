@@ -38,7 +38,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>de.spqrinfo.jee.jee6.cryptsingleton.client.MainCDI</mainClass>
+                            <mainClass>de.spqrinfo.jee.cryptsingleton.client.MainCDI</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

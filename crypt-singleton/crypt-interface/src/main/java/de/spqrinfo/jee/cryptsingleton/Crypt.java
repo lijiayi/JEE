@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.cryptsingleton;
+package de.spqrinfo.jee.cryptsingleton;
 
 public interface Crypt {
 

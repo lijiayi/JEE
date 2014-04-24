@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.cryptsingleton.module;
+package de.spqrinfo.jee.cryptsingleton.module;
 
 import javax.annotation.PostConstruct;
 import javax.crypto.spec.SecretKeySpec;
@@ -11,17 +11,17 @@ import java.util.Arrays;
 @Singleton
 public class KeyBean {
 
-    private SecureRandom random = new SecureRandom();
+    private final SecureRandom random = new SecureRandom();
 
     private SecretKeySpec key;
 
     @PostConstruct
     public void init() {
         try {
-            byte[] keyBytes = new byte[0];
-            keyBytes = new BigInteger(1024, random).toString().getBytes("UTF-8");
+            byte[] keyBytes;
+            keyBytes = new BigInteger(1024, this.random).toString().getBytes("UTF-8");
 
-            MessageDigest sha = MessageDigest.getInstance("SHA-1");
+            final MessageDigest sha = MessageDigest.getInstance("SHA-1");
             keyBytes = sha.digest(keyBytes);
 
             keyBytes = Arrays.copyOf(keyBytes, 16); // use only first 128 bit
@@ -31,7 +31,7 @@ public class KeyBean {
             // Unlimited Strength Jurisdiction Policy Files" Oracle download link,
             // use SHA-256 as hash and remove the Arrays.copyOf line.
 
-        } catch (Exception e) {
+        } catch (final Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
