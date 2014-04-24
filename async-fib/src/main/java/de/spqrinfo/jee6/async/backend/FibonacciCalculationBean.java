@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 public class FibonacciCalculationBean {
 
     @Asynchronous
-    public Future<BigInteger> asyncFibonacci(BigInteger n) {
+    public Future<BigInteger> asyncFibonacci(final BigInteger n) {
         System.out.println("Begin Calculation of fib(" + n + ")");
         final BigInteger r = synchronousFibonacci(n);
 

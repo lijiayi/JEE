@@ -8,7 +8,6 @@ import java.math.BigInteger;
 import java.util.concurrent.Future;
 
 @RequestScoped
-//@SessionScoped
 public class Fibonacci implements Serializable {
 
     private BigInteger inputValue;
@@ -28,7 +27,7 @@ public class Fibonacci implements Serializable {
     }
 
     public BigInteger getInputValue() {
-        return inputValue;
+        return this.inputValue;
     }
 
     public void setInputValue(final BigInteger inputValue) {
@@ -42,7 +41,7 @@ public class Fibonacci implements Serializable {
     public BigInteger getResult() {
         try {
             return this.result.get();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -52,7 +51,7 @@ public class Fibonacci implements Serializable {
     }
 
     public BigInteger getInputValueSynchronous() {
-        return inputValueSynchronous;
+        return this.inputValueSynchronous;
     }
 
     public void setInputValueSynchronous(final BigInteger inputValueSynchronous) {
@@ -64,20 +63,10 @@ public class Fibonacci implements Serializable {
     }
 
     public BigInteger getResultSynchronous() {
-        return resultSynchronous;
+        return this.resultSynchronous;
     }
 
     public void setResultSynchronous(final BigInteger resultSynchronous) {
         this.resultSynchronous = resultSynchronous;
     }
-
-//    @Override
-//    public String toString() {
-//        return "Fibonacci{" +
-//                "inputValue=" + inputValue +
-//                ", result=" + result +
-//                ", inputValueSynchronous=" + inputValueSynchronous +
-//                ", resultSynchronous=" + resultSynchronous +
-//                '}';
-//    }
 }

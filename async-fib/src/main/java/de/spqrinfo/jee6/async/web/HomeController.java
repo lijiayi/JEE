@@ -28,16 +28,16 @@ public class HomeController extends HttpServlet {
 
     @Override
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-        if (null == fibonacci.getInputValue()) {
-            fibonacci.setInputValue(DEFAULT_FIB_N);
+        if (null == this.fibonacci.getInputValue()) {
+            this.fibonacci.setInputValue(DEFAULT_FIB_N);
         }
 
-        if (null == fibonacci.getInputValueSynchronous()) {
-            fibonacci.setInputValueSynchronous(DEFAULT_FIB_N);
+        if (null == this.fibonacci.getInputValueSynchronous()) {
+            this.fibonacci.setInputValueSynchronous(DEFAULT_FIB_N);
         }
 
         request.setAttribute("servletId", this.toString());
-        request.setAttribute("fibonacci", fibonacci);
+        request.setAttribute("fibonacci", this.fibonacci);
         request.getRequestDispatcher(VIEW).forward(request, response);
     }
 
@@ -58,7 +58,7 @@ public class HomeController extends HttpServlet {
         }
 
         request.setAttribute("servletId", this.toString());
-        request.setAttribute("fibonacci", fibonacci);
+        request.setAttribute("fibonacci", this.fibonacci);
         request.getRequestDispatcher(VIEW).forward(request, response);
     }
 
