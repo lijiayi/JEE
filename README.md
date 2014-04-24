@@ -1,5 +1,5 @@
-JEE6 Examples
-=============
+JEE Examples
+============
 
 Contents:
 
