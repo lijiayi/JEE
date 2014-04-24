@@ -2,30 +2,23 @@ JEE6 joblog timer EJB project
 =============================
 
 Key features:
-
 - Stateless session bean providing synchronous and asynchronous fibonacci calculation
 - Servlet acting as controller
 - JSP realizing the view
 - POJO to pass state between controller and view
 
 The project consists of the following artifacts:
-
 - async-fib.war: EJBs plus web frontend
 
 Running
 =======
 
-1) `mvn package`
-
-2) Run in embedded glassfish container: `mvn embedded-glassfish:run`
-
-3) Navigate to <a href="http://localhost:8080/async-fib/">http://localhost:8080/async-fib/</a>
-
-4) Perform asynchronous calculation and check the results via the check button.
-
-5) Perform synchronous calculation and notice its blocking behaviour.
-
-6) Exit embedded glashfish by entering `x ENTER`, or press just `ENTER` to redeploy.
+1. `mvn package`
+2. Run in embedded glassfish container: `mvn embedded-glassfish:run`
+3. Navigate to <a href="http://localhost:8080/async-fib/">http://localhost:8080/async-fib/</a>
+4. Perform asynchronous calculation and check the results via the check button.
+5. Perform synchronous calculation and notice its blocking behaviour.
+6. Exit embedded glashfish by entering `x ENTER`, or press just `ENTER` to redeploy.
 
 Windows note
 ============
