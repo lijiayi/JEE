@@ -38,7 +38,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>de.spqrinfo.jee.jee6.client.MainCDI</mainClass>
+                            <mainClass>de.spqrinfo.jee.client.MainCDI</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

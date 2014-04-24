@@ -1,6 +1,6 @@
-package de.spqrinfo.jee6.hello.module;
+package de.spqrinfo.jee.hello.module;
 
-import de.spqrinfo.jee6.hello.Hello;
+import de.spqrinfo.jee.hello.Hello;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;

@@ -16,10 +16,10 @@
         <module>hello-ear</module>
     </modules>
 
-    <description>A JEE6 SLSB application with a client.</description>
-    <name>JEE6 Hello SLSB application</name>
+    <description>A JEE SLSB application with a client.</description>
+    <name>JEE Hello SLSB application</name>
 
-    <url>https://github.com/bwolf/JEE6</url>
+    <url>https://github.com/bwolf/JEE</url>
 
     <inceptionYear>2012</inceptionYear>
 
@@ -30,7 +30,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javaee-api.version>6.0</javaee-api.version>
+        <javaee-api.version>7.0</javaee-api.version>
     </properties>
 
     <build>

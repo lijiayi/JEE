@@ -1,5 +1,5 @@
-JEE6 hello SLSB project
-=======================
+JEE hello SLSB project
+======================
 
 Key features:
 
@@ -16,31 +16,41 @@ The project consists of the following artifacts:
 Running
 =======
 
-1) `mvn package`
+1. `mvn package`
 
-2) Deploy `hello-ear/target/hello.ear`
+2. Run the server part `hello-ear/target/hello.ear`:
+```shell
+cd hello-ear
+mvn embedded-glassfish:run
+```
 
-3) Run the CDI based client
+3. Run the CDI based client
+```shell
+$GLASSFISH_HOME/bin/appclient \
+    -cp hello-client/target/hello-client.jar:hello-interface/target/hello-interface.jar \
+    de.spqrinfo.jee.hello.client.MainCDI
+```
 
-    $GLASSFISH_HOME/bin/appclient \
-        -cp hello-client/target/hello-client.jar:hello-interface/target/hello-interface.jar \
-        de.spqrinfo.jee6.hello.client.MainCDI
+Output displayed
+```
+Calling remote EJB hello
+Result: Hello, World!
+```
 
-    # Resulting output
-    Calling remote EJB hello
-    Result: Hello, World!
+4. Run the JNDI based client:
+```shell
+$GLASSFISH_HOME/bin/appclient \
+    -cp hello-client/target/hello-client.jar:hello-interface/target/hello-interface.jar \
+    de.spqrinfo.jee.hello.client.MainJNDI
+```
 
-4) Run the JNDI based client:
-
-    $GLASSFISH_HOME/bin/appclient \
-        -cp hello-client/target/hello-client.jar:hello-interface/target/hello-interface.jar \
-        de.spqrinfo.jee6.hello.client.MainJNDI
-
-    # Resulting output
-    Creating InitialContext
-    JNDI lookup for 'java:global/hello/hello-module/HelloBean'
-    Calling remote EJB hello
-    Result: Hello, World!
+Output displayed
+```
+Creating InitialContext
+JNDI lookup for 'java:global/hello/hello-module/HelloBean'
+Calling remote EJB hello
+Result: Hello, World!
+```
 
 Windows note
 ============

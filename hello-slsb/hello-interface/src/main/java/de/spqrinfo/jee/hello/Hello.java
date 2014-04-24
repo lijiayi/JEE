@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.hello;
+package de.spqrinfo.jee.hello;
 
 public interface Hello {
     String hello();
