@@ -31,7 +31,7 @@ Running
         de.spqrinfo.jee.calc.client.MainCDI
 ```
 
-    # Output displayed
+Output displayed
 ```
     USAGE:
     put n - stored n into the memory
@@ -46,8 +46,9 @@ Running
     $GLASSFISH_HOME/bin/appclient \
         -cp calc-client/target/calc-client.jar:calc-interface/target/calc-interface.jar \
         de.spqrinfo.jee.calc.client.MainJNDI
+```
 
-    # Output displayed
+Output displayed
 ```
     Creating InitialContext
     JNDI lookup for 'java:global/calc/calc-module/CalcBean'
