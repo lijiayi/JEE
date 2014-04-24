@@ -19,7 +19,7 @@ Running
 
 2) Run in embedded glassfish container: `mvn embedded-glassfish:run`
 
-3) Navigate to <a href="http://localhost:8080/myapp/">http://localhost:8080/myapp/</a>
+3) Navigate to <a href="http://localhost:8080/async-fib/">http://localhost:8080/async-fib/</a>
 
 4) Perform asynchronous calculation and check the results via the check button.
 
