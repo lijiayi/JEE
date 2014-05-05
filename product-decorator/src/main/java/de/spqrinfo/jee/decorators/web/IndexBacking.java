@@ -1,10 +1,10 @@
-package de.spqrinfo.jee6.decorators.web;
+package de.spqrinfo.jee.decorators.web;
 
-import de.spqrinfo.jee6.decorators.decorator.MilkMixProduct;
-import de.spqrinfo.jee6.decorators.product.Cappuccino;
-import de.spqrinfo.jee6.decorators.product.Coffee;
-import de.spqrinfo.jee6.decorators.product.Product;
-import de.spqrinfo.jee6.decorators.product.Tea;
+import de.spqrinfo.jee.decorators.decorator.MilkMixProduct;
+import de.spqrinfo.jee.decorators.product.Cappuccino;
+import de.spqrinfo.jee.decorators.product.Coffee;
+import de.spqrinfo.jee.decorators.product.Product;
+import de.spqrinfo.jee.decorators.product.Tea;
 
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;

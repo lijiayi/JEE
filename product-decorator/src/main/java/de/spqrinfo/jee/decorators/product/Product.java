@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.decorators.product;
+package de.spqrinfo.jee.decorators.product;
 
 /**
  * Just a virtual product interface.

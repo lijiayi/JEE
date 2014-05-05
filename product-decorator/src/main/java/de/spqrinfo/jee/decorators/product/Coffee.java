@@ -1,6 +1,6 @@
-package de.spqrinfo.jee6.decorators.product;
+package de.spqrinfo.jee.decorators.product;
 
-public class Coffee implements Product {
+public class Coffee implements de.spqrinfo.jee.decorators.product.Product {
 
     @Override
     public double getPrice() {

@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.decorators.decorator;
+package de.spqrinfo.jee.decorators.decorator;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.*;

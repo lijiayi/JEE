@@ -1,6 +1,6 @@
-package de.spqrinfo.jee6.decorators.decorator;
+package de.spqrinfo.jee.decorators.decorator;
 
-import de.spqrinfo.jee6.decorators.product.Product;
+import de.spqrinfo.jee.decorators.product.Product;
 
 import javax.decorator.Decorator;
 import javax.decorator.Delegate;
@@ -30,7 +30,7 @@ public abstract class ProductWithMilkDecorator implements Product {
     @Override
     public String toString() {
         return "ProductWithMilkDecorator{" +
-                "product=" + product +
+                "product=" + this.product +
                 '}';
     }
 }

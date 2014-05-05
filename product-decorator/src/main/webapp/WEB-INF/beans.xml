@@ -6,7 +6,7 @@
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
 
     <decorators>
-        <class>de.spqrinfo.jee6.decorators.decorator.ProductWithMilkDecorator</class>
+        <class>de.spqrinfo.jee.decorators.decorator.ProductWithMilkDecorator</class>
     </decorators>
 
 </beans>

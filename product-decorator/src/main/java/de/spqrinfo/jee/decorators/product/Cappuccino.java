@@ -1,9 +1,9 @@
-package de.spqrinfo.jee6.decorators.product;
+package de.spqrinfo.jee.decorators.product;
 
-import de.spqrinfo.jee6.decorators.decorator.MilkMixProduct;
+import de.spqrinfo.jee.decorators.decorator.MilkMixProduct;
 
 @MilkMixProduct
-public class Cappuccino implements Product {
+public class Cappuccino implements de.spqrinfo.jee.decorators.product.Product {
 
     @Override
     public double getPrice() {
