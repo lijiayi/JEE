@@ -12,7 +12,7 @@
     <description>A JEE servlet application to demonstrate CDI scopes.</description>
     <name>JEE servlet CDI application</name>
 
-    <url>https://github.com/bwolf/JEE7</url>
+    <url>https://github.com/bwolf/JEE</url>
 
     <inceptionYear>2012</inceptionYear>
 

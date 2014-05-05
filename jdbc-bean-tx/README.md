@@ -1,5 +1,5 @@
-JEE6 JDBC Bean Managed Transactions Project
-===========================================
+JEE JDBC Bean Managed Transactions Project
+==========================================
 
 Key features:
 

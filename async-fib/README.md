@@ -1,5 +1,5 @@
-JEE6 joblog timer EJB project
-=============================
+JEE joblog timer EJB project
+============================
 
 Key features:
 - Stateless session bean providing synchronous and asynchronous fibonacci calculation

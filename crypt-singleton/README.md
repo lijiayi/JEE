@@ -1,5 +1,5 @@
-JEE6 singleton project
-======================
+JEE singleton project
+=====================
 
 This example demonstrates how to use a singleton EJB to initialize the server side
 application logic. It implements a simple symetric encryption service.
