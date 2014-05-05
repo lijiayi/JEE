@@ -9,12 +9,13 @@
 
     <packaging>war</packaging>
 
-    <description></description>
-    <name></name>
+    <description>A JEE web application demonstrating declarative
+    security and form based login.</description>
+    <name>JEE security web application</name>
 
     <url>https://github.com/bwolf/JEE</url>
 
-    <inceptionYear>2012</inceptionYear>
+    <inceptionYear>2014</inceptionYear>
 
     <organization>
         <name>SPQR Informatik GmbH</name>
