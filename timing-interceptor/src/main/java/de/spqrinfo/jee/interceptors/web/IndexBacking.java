@@ -1,6 +1,6 @@
-package de.spqrinfo.jee6.interceptors.web;
+package de.spqrinfo.jee.interceptors.web;
 
-import de.spqrinfo.jee6.interceptors.backend.SomeBusinessBean;
+import de.spqrinfo.jee.interceptors.backend.SomeBusinessBean;
 
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;

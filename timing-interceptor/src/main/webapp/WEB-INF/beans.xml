@@ -6,7 +6,7 @@
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
 
     <interceptors>
-        <class>de.spqrinfo.jee6.interceptors.measurement.TimingInterceptor</class>
+        <class>de.spqrinfo.jee.interceptors.measurement.TimingInterceptor</class>
     </interceptors>
 
 </beans>

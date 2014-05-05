@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.interceptors.measurement;
+package de.spqrinfo.jee.interceptors.measurement;
 
 import javax.interceptor.InterceptorBinding;
 import java.lang.annotation.*;
