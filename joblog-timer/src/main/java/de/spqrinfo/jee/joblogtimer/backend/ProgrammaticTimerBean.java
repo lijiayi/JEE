@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.joblogtimer.backend;
+package de.spqrinfo.jee.joblogtimer.backend;
 
 import javax.annotation.Resource;
 import javax.ejb.*;

@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.jdbc.backend;
+package de.spqrinfo.jee.jdbc.backend;
 
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
@@ -13,13 +13,13 @@ import java.util.List;
 @TransactionManagement(TransactionManagementType.BEAN)
 public class MessageBean {
 
-    @Resource(name = "jdbc/jee6")
+    @Resource(name = "jdbc/jee")
     private DataSource dataSource;
 
     public int size() {
         final String SQL_SELECT_COUNT = "SELECT COUNT(*) FROM message";
         try {
-            final Connection con = dataSource.getConnection();
+            final Connection con = this.dataSource.getConnection();
             con.setAutoCommit(false);
             try {
                 final Statement stmt = con.createStatement();
@@ -33,7 +33,7 @@ public class MessageBean {
             } finally {
                 con.close();
             }
-        } catch (SQLException ex) {
+        } catch (final SQLException ex) {
             throw new RuntimeException(ex);
         }
     }
@@ -45,7 +45,7 @@ public class MessageBean {
 
         final String SQL_INSERT = "INSERT INTO message (msg) VALUES (?)";
         try {
-            final Connection con = dataSource.getConnection();
+            final Connection con = this.dataSource.getConnection();
             con.setAutoCommit(false);
             try {
                 final PreparedStatement pStmt = con.prepareStatement(SQL_INSERT);
@@ -56,13 +56,13 @@ public class MessageBean {
                 } finally {
                     pStmt.close();
                 }
-            } catch (Exception ex) {
+            } catch (final Exception ex) {
                 con.rollback();
                 throw new RuntimeException(ex);
             } finally {
                 con.close();
             }
-        } catch (SQLException ex) {
+        } catch (final SQLException ex) {
             throw new RuntimeException(ex);
         }
     }
@@ -71,14 +71,14 @@ public class MessageBean {
         final String SQL_SELECT_RECENT = "SELECT msg FROM message ORDER BY id DESC LIMIT ?";
         final int RESULT_SIZE = 15;
         try {
-            final Connection con = dataSource.getConnection();
+            final Connection con = this.dataSource.getConnection();
             con.setAutoCommit(false);
             try {
                 final PreparedStatement pStmt = con.prepareStatement(SQL_SELECT_RECENT);
                 try {
                     pStmt.setInt(1, RESULT_SIZE);
 
-                    List<String> ret = new ArrayList<String>();
+                    final List<String> ret = new ArrayList<String>();
                     final ResultSet rs = pStmt.executeQuery();
                     while (rs.next()) {
                         ret.add(rs.getString(1));
@@ -90,7 +90,7 @@ public class MessageBean {
             } finally {
                 con.close();
             }
-        } catch (SQLException ex) {
+        } catch (final SQLException ex) {
             throw new RuntimeException(ex);
         }
     }

@@ -1,6 +1,6 @@
-package de.spqrinfo.jee6.jdbc.web;
+package de.spqrinfo.jee.jdbc.web;
 
-import de.spqrinfo.jee6.jdbc.backend.MessageBean;
+import de.spqrinfo.jee.jdbc.backend.MessageBean;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
@@ -21,7 +21,7 @@ public class IndexBacking {
     }
 
     public String getMessageText() {
-        return messageText;
+        return this.messageText;
     }
 
     public void setMessageText(final String s) {

@@ -1,7 +1,7 @@
-package de.spqrinfo.jee6.joblogtimer.web;
+package de.spqrinfo.jee.joblogtimer.web;
 
-import de.spqrinfo.jee6.joblogtimer.backend.JobLogBean;
-import de.spqrinfo.jee6.joblogtimer.backend.LogEntry;
+import de.spqrinfo.jee.joblogtimer.backend.JobLogBean;
+import de.spqrinfo.jee.joblogtimer.backend.LogEntry;
 
 import javax.ejb.EJB;
 import javax.enterprise.inject.Model;

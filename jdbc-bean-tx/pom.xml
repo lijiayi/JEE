@@ -9,10 +9,10 @@
 
     <packaging>war</packaging>
 
-    <description>A JEE6 JDBC bean managed TX web application.</description>
-    <name>JEE6 JDBC bean managed TX web application</name>
+    <description>A JEE JDBC bean managed TX web application.</description>
+    <name>JEE JDBC bean managed TX web application</name>
 
-    <url>https://github.com/bwolf/JEE6</url>
+    <url>https://github.com/bwolf/JEE</url>
 
     <inceptionYear>2012</inceptionYear>
 
@@ -23,7 +23,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javaee-api.version>6.0</javaee-api.version>
+        <javaee-api.version>7.0</javaee-api.version>
     </properties>
 
     <dependencies>
@@ -45,6 +45,19 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.glassfish.embedded</groupId>
+                <artifactId>maven-embedded-glassfish-plugin</artifactId>
+                <version>3.1.2.2</version>
+                <configuration>
+                    <app>${project.build.directory}/${project.build.finalName}.war</app>
+                    <ports>
+                        <http-listener>8080</http-listener>
+                    </ports>
+                    <contextRoot>${project.artifactId}</contextRoot>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.joblogtimer.backend;
+package de.spqrinfo.jee.joblogtimer.backend;
 
 import java.util.Date;
 
@@ -12,10 +12,10 @@ public class LogEntry {
     }
 
     public Date getCreated() {
-        return created;
+        return this.created;
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 }

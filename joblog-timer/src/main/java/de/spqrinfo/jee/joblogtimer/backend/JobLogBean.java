@@ -1,4 +1,4 @@
-package de.spqrinfo.jee6.joblogtimer.backend;
+package de.spqrinfo.jee.joblogtimer.backend;
 
 import javax.ejb.*;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 @ConcurrencyManagement(ConcurrencyManagementType.CONTAINER)
 public class JobLogBean {
 
-    private List<LogEntry> logEntries = new ArrayList<LogEntry>();
+    private final List<LogEntry> logEntries = new ArrayList<LogEntry>();
 
     @Lock(LockType.READ)
     public boolean hasMessages() {
