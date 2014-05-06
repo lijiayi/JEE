@@ -1,4 +1,4 @@
-package de.spqrinfo.jee.joblogtimer.web;
+package de.spqrinfo.jee.hellosecurity.web;
 
 import javax.enterprise.inject.Model;
 
