@@ -73,7 +73,7 @@
             <version>2.3</version>
             <configuration>
               <browser>*firefox</browser>
-              <suite>src/test/selenium/hello-security</suite>
+              <suite>src/test/selenium/hello-security-suite.html</suite>
               <startURL>http://cico.local:8080</startURL>
             </configuration>
             <executions>
