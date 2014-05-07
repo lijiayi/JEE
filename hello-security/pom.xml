@@ -1,60 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.spqr-info.jee.hello-security</groupId>
-    <artifactId>hello-security</artifactId>
-    <version>1.0-SNAPSHOT</version>
+  <groupId>de.spqr-info.jee.hello-security</groupId>
+  <artifactId>hello-security</artifactId>
+  <version>1.0-SNAPSHOT</version>
 
-    <packaging>war</packaging>
+  <packaging>war</packaging>
 
-    <description>A JEE web application demonstrating declarative
-    security and form based login.</description>
-    <name>JEE security web application</name>
+  <description>A JEE web application demonstrating declarative
+  security and form based login.</description>
+  <name>JEE security web application</name>
 
-    <url>https://github.com/bwolf/JEE</url>
+  <url>https://github.com/bwolf/JEE</url>
 
-    <inceptionYear>2014</inceptionYear>
+  <inceptionYear>2014</inceptionYear>
 
-    <organization>
-        <name>SPQR Informatik GmbH</name>
-        <url>http://spqr-info.de/</url>
-    </organization>
+  <organization>
+    <name>SPQR Informatik GmbH</name>
+    <url>http://spqr-info.de/</url>
+  </organization>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javaee-api.version>7.0</javaee-api.version>
-    </properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <javaee-api.version>7.0</javaee-api.version>
+  </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>${javaee-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
+  <dependencies>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>${javaee-api.version}</version>
+      <scope>provided</scope>
+    </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-        </dependency>
-    </dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+    </dependency>
+  </dependencies>
 
-    <build>
-        <finalName>${project.artifactId}</finalName>
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>selenium-with-ci-glassfish</id>
+      <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>selenium-maven-plugin</artifactId>
+            <version>2.3</version>
+            <configuration>
+              <browser>*firefox</browser>
+              <suite>src/test/selenium/hello-security</suite>
+              <startURL>http://cico.local:8080</startURL>
+            </configuration>
+            <executions>
+              <execution>
+                <id>run-selenium-tests</id>
+                <phase>integration-test</phase>
+                <goals>
+                  <goal>selenese</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
-    </build>
+      </build>
+    </profile>
+  </profiles>
 
 </project>
