@@ -74,7 +74,7 @@
             <configuration>
               <browser>*firefox</browser>
               <suite>src/test/selenium/hello-security-suite.html</suite>
-              <startURL>http://cico.local:8080</startURL>
+              <startURL>http://cico.local:8080/hello-security/</startURL>
             </configuration>
             <executions>
               <execution>
